@@ -1,0 +1,3 @@
+Step 1: Open Window Power Shell.
+Step 2: Link to the jdk file in the folder using "cd" (ex: "cd C:\Users\Admin\Desktop\Mahiru-chan\jdk\jdk-19.0.2\bin")
+Step 3: Type "java -jar Lavalink.jar"
