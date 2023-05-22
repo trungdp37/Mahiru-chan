@@ -17,29 +17,24 @@ class Vocabulary(commands.Cog):
             vocabulary = f.read().splitlines()
         return vocabulary
 
-    def get_word_mean_ex(self, vocabulary, meaning_file, example_file):
+    def get_word_mean_ex(self, vocabulary, meaning_file):
         word = random.choice(vocabulary)
         with open(meaning_file, encoding='utf-8') as f:
             meaning = f.read().splitlines()
             mean = meaning[vocabulary.index(word)]
-        with open(example_file, encoding='utf-8') as f:
-            example = f.read().splitlines()
-            ex = example[vocabulary.index(word)]
-        return [word, mean, ex]
+        return [word, mean]
 
     @commands.command(aliases=["v"])
     async def vocabulary(self, ctx):
         vocabulary = self.read_vocabulary("txt/vocabulary.txt")
         meanings = "txt/meaning.txt"
-        examples = "txt/example.txt"
 
-        word, mean, ex = self.get_word_mean_ex(vocabulary, meanings, examples)
+        word, mean = self.get_word_mean_ex(vocabulary, meanings)
 
         now = datetime.datetime.now()                            
         embed_message = discord.Embed(color=discord.Color.dark_embed())        
         embed_message.add_field(name="Từ vựng", value=word, inline=False)
-        embed_message.add_field(name="Nghĩa", value=mean, inline=False)
-        embed_message.add_field(name="Ví dụ", value=ex, inline=True)
+        embed_message.add_field(name="Nghĩa", value=mean, inline=True)
         embed_message.set_footer(text=f"Datetime | {now:%Y-%m-%d %H:%M}")
          
         await ctx.send(embed=embed_message)                            
