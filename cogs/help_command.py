@@ -9,8 +9,6 @@ class Helpcmd(commands.Cog):
     {"name": "add", "value": "Tự thêm biểu thức riêng của mình.", "inline": False},
     {"name": "avatar", "value": "Hiện avatar của một user trong server.", "inline": False},
     {"name": "calc", "value": "Máy tính dùng để tính toán biểu thức.", "inline": False},
-    {"name": "goodbye", "value": "Đơn giản là tạm biệt thui.", "inline": False},
-    {"name": "hello", "value": "Đơn giản là chào ai đó thui.", "inline": False},
     {"name": "help", "value": "Hiện các chức năng của em.", "inline": False},
     {"name": "ban", "value": "Ban một user.", "inline": False},
     {"name": "continue", "value": "Tiếp tục phát nhạc.", "inline": False},
@@ -35,6 +33,10 @@ class Helpcmd(commands.Cog):
     {"name": "setprefix", "value": "Setting lại prefix cho server.", "inline": False},
     {"name": "snipe", "value": "Hiện tin nhắn cua user vừa xoá.", "inline": False},
     {"name": "vocabulary", "value": "Hiện một từ vựng jp ngẫu nhiên.", "inline": False},
+    {"name": "snipe", "value": "Hiện tin nhắn do một người dùng đã xoá trước đó.", "inline": False},
+    {"name": "speak", "value": "Text to speech", "inline": False},
+    {"name": "choose", "value": "Chọn ngẫu nhiên một trong các lựa chọn bạn đưa ra.", "inline": False},
+    {"name": "remind", "value": "Hẹn giờ", "inline": False},
 ] 
         self.sorted_fields = sorted(self.help_fields, key=lambda x: x['name'])
         

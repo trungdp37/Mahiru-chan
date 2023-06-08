@@ -235,7 +235,7 @@ class Music(commands.Cog):
             mbed = discord.Embed(title=f"Có lỗi khi mở bài này!", color=discord.Color.red())
             await ctx.send(embed=mbed)
 
-    @commands.command(name="leave", aliases=["disconnect"])
+    @commands.command(name="disconnect")
     async def disconnect_command(self, ctx):
         node = wavelink.NodePool.get_node()
         player = node.get_player(ctx.guild.id)
