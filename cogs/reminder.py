@@ -6,8 +6,7 @@ from datetime import datetime, timedelta
 class Reminder(commands.Cog):
     def __init__(self, client):
         self.client = client
-        
-        
+            
     @commands.Cog.listener()
     async def on_ready(self):
         print('reminder.py is ready!')
@@ -19,7 +18,7 @@ class Reminder(commands.Cog):
         
         await ctx.send(f"Đã đặt hẹn giờ thành công. Em sẽ nhắc nhở sau {time}.")
         await asyncio.sleep(remind_time)
-        await ctx.send(f"Tới giờ rồi nha anh {ctx.author.mention}. Nội dung: {message}")
+        await ctx.send(f"Tới giờ hẹn rồi nha {ctx.author.mention}. Nội dung: {message}")
         
         
 async def setup(client):

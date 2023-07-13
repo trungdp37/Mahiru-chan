@@ -37,6 +37,8 @@ class Helpcmd(commands.Cog):
     {"name": "speak", "value": "Text to speech", "inline": False},
     {"name": "choose", "value": "Chọn ngẫu nhiên một trong các lựa chọn bạn đưa ra.", "inline": False},
     {"name": "remind", "value": "Hẹn giờ", "inline": False},
+    {"name": "server", "value": "Thông tin server", "inline": False},
+    {"name": "trans", "value": "Dịch văn bản tiếng Anh -> tiếng Việt", "inline": False},
 ] 
         self.sorted_fields = sorted(self.help_fields, key=lambda x: x['name'])
         

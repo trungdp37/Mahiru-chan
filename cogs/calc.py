@@ -1,8 +1,7 @@
 import discord
-import cogs
-from cogs.System.matheval import *
 from discord.ext import commands
 
+from cogs.System.matheval import *
 
 class Calc(commands.Cog):
     def __init__(self, client):
